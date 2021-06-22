@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Order" max_length="40" name="x_snc_next_order_m_order" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Order ID" max_length="40" name="order_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="order_placed" display="true" label="Order Status" max_length="40" name="order_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Order Cancelled" value="order_cancelled"/>
+                <element inactive_on_update="false" label="Order Delayed" value="order_delayed"/>
+                <element inactive_on_update="false" label="Order Delivered" value="order_delivered"/>
+                <element inactive_on_update="false" label="Order Placed" value="order_placed"/>
+                <element inactive_on_update="false" label="Order Shipped" value="order_shipped"/>
+                <element inactive_on_update="false" label="With Delivery Partner" value="with_delivery_partner"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true" label="Order Value" max_length="20" name="order_value" type="currency"/>
+    </element>
+</database>
